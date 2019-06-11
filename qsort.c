@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//опорный - последний элемент массива
+//pillar is the last element
 void	qsort(int	*arr, int arr_left, int arr_right)
 {
 
-	if (arr_left == arr_right || arr_left > arr_right) //условие остановки рекусрии
+	if (arr_left == arr_right || arr_left > arr_right) //stop time
 	{
 		return;
 	}
@@ -15,7 +15,7 @@ void	qsort(int	*arr, int arr_left, int arr_right)
 		int pillar = arr_right;
 		for (int i = 0; i < pillar; i++)
 		{
-			if (arr[i] > arr[pillar]) //свдиг опорного
+			if (arr[i] > arr[pillar]) //move pillar element
 			{
 				buf = arr[i];
 				arr[i] = arr[pillar - 1];
